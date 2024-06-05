@@ -12,26 +12,75 @@
     <title>Calculadora de Planos de Saúde</title>
 </head>
 <body class="bg-light">
-    <div class="container-fluid h-100 d-flex flex-column justify-content-center align-items-center">
-        <div class="bg-white p-4 rounded shadow-sm">
-            <h1 class="text-center mb-4 text-primary">Calculadora de Planos de Saúde</h1>
-            <form id="formSaude">
-                <div class="form-group">
-                    <label for="idade">Idade:</label>
-                    <input type="number" class="form-control" id="idade" required>
+    <div class="container-fluid section1">
+        <div class="container conteudo1">
+            <div class="row justify-content-center logo">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <img src="img/logo.png" alt="LOGO" srcset="">
                 </div>
-                <div class="form-group">
-                    <label for="peso">Peso (kg):</label>
-                    <input type="number" class="form-control" id="peso" required>
+            </div>
+            <!-- TITULO E P -->
+            <div class="row apre1">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h1>ESCOLHA SEU PLANO IDEAL</h1>
+                    <p>SOMOS UMA EMPRESA ESPECIALIZADA EM BUSCAR O MELHOR PLANO DE SAUDE.</p>
                 </div>
-                <div class="form-group">
-                    <label for="altura">Altura (cm):</label>
-                    <input type="number" class="form-control" id="altura" required>
-                </div>
-                <button type="button" class="btn btn-primary btn-block" onclick="calcular()">Calcular</button>
-            </form>
-            <div id="tabelaResultados" class="mt-4"></div>
+            </div>
         </div>
     </div>
+
+    <div class="container-fluid section2">
+        <div class="container conteudo2">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md6 col-lg-6 conteudo2texto">
+                    <h1>Sobre o Site</h1>
+                    <p>
+                        Bem-vindo à nossa calculadora de planos de saúde!</br>
+                        Nosso objetivo é ajudar você a encontrar o plano de saúde mais vantajoso com base no seu Índice de Massa Corporal (IMC), idade e peso. Sabemos que escolher um plano de saúde pode ser complicado, então criamos esta ferramenta para simplificar o processo e fornecer uma comparação clara entre as ofertas de duas operadoras de saúde, denominadas A e B.</br>
+                        <b>Como Funciona</b></br>
+                        Para calcular o melhor plano, basta inserir sua idade, peso e altura no formulário. A calculadora utiliza essas informações para determinar seu IMC, que é uma medida utilizada para avaliar se uma pessoa está abaixo do peso, com peso normal, sobrepeso, ou em diferentes graus de obesidade.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md6 col-lg-6">
+                    <div class="container-fluid h-100 d-flex flex-column justify-content-center align-items-center">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h1 class="text-center mb-4 text-primary">Calculadora de Planos de Saúde</h1>
+                            <form id="formSaude">
+                                <div class="form-group">
+                                    <label for="idade">Idade:</label>
+                                    <input type="number" class="form-control" id="idade" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="peso">Peso (kg):</label>
+                                    <input type="number" class="form-control" id="peso" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="altura">Altura (cm):</label>
+                                    <input type="number" class="form-control" id="altura" required>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block" onclick="calcular()">Calcular</button>
+                            </form>
+                            <div id="tabelaResultados" class="mt-4"></div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid footer">
+            <div class="container">
+                <div class="row align-self-end justify-content-between">
+                    <div class="col-lg-4">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+                    <div class="col-lg-8">
+                        <p>Todos os direitos reservados. ©Copyright - Desenvolvido por Mateus Rodrigues</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

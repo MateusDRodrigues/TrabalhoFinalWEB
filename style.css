@@ -1,5 +1,41 @@
-body {
-    height: 100vh;
+.section1 {
+    background-image: url('../CALCULADORA/img/backgroundsection1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.section1 .logo img {
+    width: 20vh;
+    margin: 5vh 0px;
+}
+
+.conteudo1 {
+    color: white;
+    text-align: center;
+    padding: 0px;
+}
+
+
+.section2 {
+    background-color: rgb(23, 37, 56);
+    padding: 15vh 0vh;
+}
+
+.conteudo2texto h1 {
+    color: white;
+}
+
+.conteudo2texto p {
+    color: white;
+}
+
+.form {
+    margin-bottom: 10vh;
+}
+
+.section1 .customer-logo img {
+    width: 10vh;
+    margin-bottom: 3vh;
 }
 
 .container-fluid {
@@ -56,4 +92,19 @@ body {
     background-color: #28a745;
     padding: 2px 5px;
     border-radius: 3px;
+}
+
+.footer{
+    background-color: rgb(37, 59, 86);
+    font-size: 70%;
+    padding: 1vh;
+}
+
+.footer img {
+    width: 10vh;
+}
+
+.footer p {
+    color: white;
+    text-align: right;
 }
