@@ -13,12 +13,16 @@ function calcular() {
 }
 
 function calcularResultados(idade, peso, altura) {
-    var planoA_basico = 100 + idade * 10 * altura / 10;
-    var planoA_padrao = (150 + idade * 15) * altura / 10;
-    var planoA_premium = (200 + idade * 20 - (Math.max(altura, 160) - 160) * 10) * altura / 10;
-    var imc = peso / Math.pow(altura / 100, 2);
-    var fatorComorbidade = 1;
+    var alturaM = altura / 100;  // Converter altura para metros
+    var imc = peso / (alturaM * alturaM);  // Calcular o IMC corretamente
 
+    // Regras de negócio da Operadora de Saúde A
+    var planoA_basico = 100 + (idade * 10 * (imc / 10));
+    var planoA_padrao = (150 + (idade * 15)) * (imc / 10);
+    var planoA_premium = (200 - (imc * 10) + (idade * 20)) * (imc / 10);
+
+    // Regras de negócio da Operadora de Saúde B
+    var fatorComorbidade = 1;
     if (imc < 18.5) {
         fatorComorbidade = 10;
     } else if (imc >= 25 && imc < 30) {
@@ -31,9 +35,9 @@ function calcularResultados(idade, peso, altura) {
         fatorComorbidade = 30;
     }
 
-    var planoB_basico = 100 + fatorComorbidade * 10 * altura / 10;
-    var planoB_padrao = (150 + fatorComorbidade * 15) * altura / 10;
-    var planoB_premium = (200 - (Math.max(altura, 160) - 160) * 10 + fatorComorbidade * 20) * altura / 10;
+    var planoB_basico = 100 + (fatorComorbidade * 10 * (imc / 10));
+    var planoB_padrao = (150 + (fatorComorbidade * 15)) * (imc / 10);
+    var planoB_premium = (200 - (imc * 10) + (fatorComorbidade * 20)) * (imc / 10);
 
     return {
         planoA: {
